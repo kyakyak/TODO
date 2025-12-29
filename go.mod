@@ -1,4 +1,4 @@
-module cmd/server/main.go
+module TODO
 
 go 1.25.5
 

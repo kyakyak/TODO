@@ -2,4 +2,11 @@ package http
 
 import "go.uber.org/fx"
 
-var Module = fx.Options(fx.Provide(NewEcho), fx.Invoke(StartServer))
+var Module = fx.Options(
+	fx.Provide(
+		NewEcho,
+	),
+	fx.Invoke(
+		StartServer,
+	),
+)

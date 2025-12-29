@@ -1,14 +1,19 @@
 package main
 
-import "go.uber.org/fx"
+import (
+	"go.uber.org/fx"
+
+	"TODO/internal/config"
+	"TODO/internal/handler"
+	httpinfra "TODO/internal/infrastructure/http"
+)
 
 func main() {
-	app := fx.New(
+	fx.New(
 		fx.Provide(
-
+			config.NewConfig,
 		),
-		http.Module,
-		handler.Module
-	)
-	
+		httpinfra.Module,
+		handler.Module,
+	).Run()
 }
