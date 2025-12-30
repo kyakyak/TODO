@@ -26,8 +26,7 @@ func (h *HealthHandler) Health(c echo.Context) error {
 	})
 }
 
-// DB 상태 확인 함수
 func checkDatabaseConnection() string {
-	// DB 연결 체크 로직
-	return "ok" // "ok" 또는 "down"
+
+	return "ok"
 }

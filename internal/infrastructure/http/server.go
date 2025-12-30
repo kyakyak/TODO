@@ -13,7 +13,7 @@ import (
 func StartServer(
 	lc fx.Lifecycle,
 	e *echo.Echo,
-	cfg config.Config,
+	cfg *config.Config,
 ) {
 	lc.Append(fx.Hook{
 		OnStart: func(ctx context.Context) error {
